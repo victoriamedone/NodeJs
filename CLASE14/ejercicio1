@@ -1,0 +1,16 @@
+let deportista = {
+    nombre : "Victoria",
+    energia : 200,
+    experiencia : 30,
+    entrenarHoras : function(cantHoras){
+        let energia = this.energia - cantHoras*5
+        let experiencia = this.experiencia - cantHoras*2
+        return "luego del entrenamiento, perdió "+ (energia) + " de energía y ganó " +
+         (experiencia) + " de experiencia."  
+    }
+
+    
+}
+ 
+console.log(deportista.entrenarHoras(4));
+
