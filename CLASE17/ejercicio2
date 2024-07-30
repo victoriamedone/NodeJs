@@ -1,0 +1,42 @@
+let list = [12,3,5,7,22,47,100];
+
+// Para aplicar búsqueda binaria, deberán ordenar primero la lista, de menor
+// a mayor, utilizando bubble sort.
+
+for(let i=0; i < list.length; i++){
+    for(let j = 0; j < list.length -1 ; j++){
+        if(list[j]>list[j+1]){
+            let temp = list[j];
+            list[j] = list[j+1];
+            list[j+1] = temp;
+        }
+    }
+}
+
+console.log(list);
+
+//buscamos los valores asignados [12 - 5 - 22 - 100]
+
+const busquedaBinaria = (list,value) =>{
+    let left = 0; 
+    let right = list.length -1;
+
+    while(left <= right){
+        let mid = Math.floor((left + right) / 2);
+   
+        if (list[mid] == value){
+            return mid;
+        }else if(list[mid] > value){
+            right = mid - 1;
+        } else {
+            left = mid + 1;
+        }
+    }
+    return null //por si no encuentra nada
+}
+
+    console.log('el numero buscado se encuentra en la posición: ' + busquedaBinaria(list,12));
+    console.log('el numero buscado se encuentra en la posición: ' + busquedaBinaria(list,5));
+    console.log('el numero buscado se encuentra en la posición: ' + busquedaBinaria(list,22));
+    console.log('el numero buscado se encuentra en la posición: ' + busquedaBinaria(list,100));
+    
