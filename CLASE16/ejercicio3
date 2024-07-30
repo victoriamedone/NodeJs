@@ -1,0 +1,57 @@
+// • Ejercicio 3: reduce() “Maraton”
+// Nos dejaron un array con las vueltas que dio una corredora entrenando
+// en distintos momentos para una maratón.Nuestro desafío será crear la
+// variable totalVueltas y almacenar en ella el total, usando el método
+// reduce.
+
+
+let vueltas = [5, 8, 12, 3, 22];
+
+let totalVueltas =  vueltas.reduce(function(acumulador, vuelta){
+    return acumulador + vuelta
+});
+
+console.log('El total de vueltas es: ' + totalVueltas);
+
+// ✓ Añadir una vuelta al principio del array:
+
+vueltas.unshift(7);
+console.log('agregamos una nueva vuelta con valor 7: ' +vueltas);
+
+// ✓ Eliminar la última vuelta del array:
+
+let ultimaVuelta = vueltas.pop();
+console.log('Se ha eliminado la ultima vuelta, de valor: '+ ultimaVuelta);
+
+// ✓ Verificar si la vuelta 10 está en el array y agregarla al final si no está
+// presente
+
+if(!vueltas.includes(10)){
+    vueltas.push(10);
+    console.log('La vuelta con valor 10 no estaba, pero ya la agregamos');
+};
+
+console.log(vueltas);
+
+// ✓ Eliminar la primera vuelta del array:
+
+let primeraVuelta = vueltas.shift();
+console.log('Se ha eliminado la primera vuelta, de valor: '+ primeraVuelta);
+
+// ✓ Verificar si la vuelta 15 está en el array y agregarla al principio si no
+// está presente
+
+if(!vueltas.includes(15)){
+    vueltas.unshift(15);
+    console.log('La vuelta con valor 15 no estaba, pero ya la agregamos');
+};
+
+console.log(vueltas);
+
+// ✓ Calcular el nuevo total de vueltas usando reduce:
+
+let totalVueltas2 =  vueltas.reduce(function(acumulador, vuelta){
+    return acumulador + vuelta
+});
+
+console.log('El total de vueltas es: ' + totalVueltas2);

@@ -1,0 +1,69 @@
+// • Ejercicio 2: filter() “Alumnos”
+
+
+
+let estudiantes = [
+    {nombre: 'John', promedio: 8.5 , aprobado: true},
+    {nombre: 'Jane', promedio: 7 , aprobado: true},
+    {nombre: 'Josy', promedio: 5 , aprobado: false},
+    {nombre: 'June', promedio: 3 , aprobado: false},
+    {nombre: 'Jake', promedio: 4 , aprobado: false},
+    {nombre: 'Jill', promedio: 9 , aprobado: true},  
+];
+
+// ✓ Filtra los estudiantes en dos listas: aprobados y desaprobados.
+
+let aprobados = estudiantes.filter(estudiantes => estudiantes.aprobado == true);
+let desaprobados = estudiantes.filter(estudiantes => estudiantes.aprobado == false);
+
+console.log('aprobadxs: ' + aprobados );
+console.log('desaprobadxs: ' + desaprobados);
+
+// ✓ Manipula la lista de aprobados agregando un estudiante al inicio y
+// otro al final.
+
+aprobados.unshift({
+    nombre:'Joan', promedio: 9.5, aprobado: true
+});
+
+aprobados.push({
+    nombre:'Jinx', promedio: 7, aprobado: true
+});
+
+console.log('lista de aprobadxs actualizada: '+ aprobados);
+
+// ✓ Manipula la lista de desaprobados eliminando al primero y al último
+// estudiante.
+
+desaprobados.pop();
+desaprobados.shift();
+
+console.log('la nueva lista de desaprobadxs es: ' + desaprobados);
+
+// ✓ Utiliza map junto con indexOf para buscar un estudiante específico
+// en la lista de aprobados y muestra su índice si está presente.
+
+let estudianteEspecifico = aprobados.map(function(alumno){
+    return alumno.nombre
+});
+
+let indice = estudianteEspecifico.indexOf('Jane');
+console.log('A quien busca se encuentra en la posición: ' + indice);
+
+// ✓ Utiliza includes para verificar si un estudiante está en la lista de
+// desaprobados y muestra un mensaje indicando su presencia.
+
+let buscarNombre = 'June'
+if (desaprobados.map(alumno => alumno.nombre).includes(buscarNombre)){
+    console.log('June se encuentra en la posición: ' + indice);
+} else {
+    console.log('June no se encuentra en la lista');
+};
+
+// ✓ Muestra las listas de aprobados y desaprobados actualizadas
+// después de todas las operaciones.
+
+console.log('Aprobadxs' + aprobados);
+console.log('Desaprobadxs: ' + desaprobados);
+
+
