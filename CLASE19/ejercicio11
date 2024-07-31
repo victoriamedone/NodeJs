@@ -1,0 +1,11 @@
+// 11) Crear una función que recibe un parámetro y devuelve que
+// tipo de dato es ese parámetro.I nvestiga sobre la palabra
+// reservada tipeof.
+
+let x = true;
+let funcion = (x) =>{
+    x=typeof(x);
+    return x
+}
+
+console.log(funcion(x));

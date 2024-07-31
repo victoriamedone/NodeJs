@@ -1,0 +1,10 @@
+// 9) Crear una función que imprima todos los dígitos decimales, del 0
+// al 9, usando un ciclo For.
+
+let imprimir=()=>{
+    for(i=0; i<=9; i++){
+        console.log(i);
+    }
+}
+
+imprimir();

@@ -1,0 +1,10 @@
+// 7) Realizar una función que, dada una lista, devuelva una nueva lista
+// cuyo contenido sea igual a la original pero invertida.
+
+let array = [0,3,0,3,4,5,6];
+let arrayInvertido= (array) =>{
+    let final = array.slice(0,array.length);
+    return final.reverse();
+}
+
+console.log(arrayInvertido(array));

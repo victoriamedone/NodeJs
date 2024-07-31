@@ -1,0 +1,16 @@
+// 4) Dado un numero entero positivo, mostrar su factorial. Pista: El
+// factorial de un número se obtiene multiplicando todos los
+// números enteros positivos que hay entre el 1 y ese número.
+
+ const prompt = require("prompt-sync")();
+ let N = parseInt(prompt("Ingrese un numero:  "));
+
+ let calcularFactorial=(N)=>{
+     let i = N
+     while(i>1){
+         i--;
+         Nf= N*=i
+     }
+     console.log("El factorial es " + Nf)
+ }
+ calcularFactorial(N);

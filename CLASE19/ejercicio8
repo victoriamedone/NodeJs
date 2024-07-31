@@ -1,0 +1,21 @@
+// 8) Realizar una función que escriba una pirámide del 1 al 30 de la
+// siguiente forma:
+// 1
+// 22
+// 333
+// 4444
+// 55555
+// 666666
+
+const piramide = (limit) => {
+    for(let i = 0; i <=limit ; i++){
+        let linea = "";
+
+    for(let repetir = 0 ; repetir<i ; repetir++){
+        linea+=i+""
+    }
+    console.log(linea);
+    }
+}
+
+piramide(30);

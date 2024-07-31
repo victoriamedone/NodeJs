@@ -1,0 +1,12 @@
+// 12) Crea una función que le pasamos el radio de un circulo y
+// nos devuelve la circunferencia.
+
+const prompt = require("prompt-sync")();
+let radio = prompt("Ingresa el radio de la circunferencia a calcular:  ");
+
+let calculador = (radio) =>{
+    let pi = Math.PI.toFixed(3)
+    return(pi*Math.pow(radio,2));
+}
+
+console.log("El diametro es " + calculador(Math.ceil(radio)));

@@ -1,0 +1,42 @@
+
+
+
+
+// Pide al usuario que ingrese una oración. Luego, escribe la función
+// “procesarOracion”
+
+const prompt = require("prompt-sync")();
+
+let fraseUsuario = parseString(prompt("Ingrese una frase: "));
+
+function procesarFrase(fraseUsuario){
+    
+    // 1. Quite los espacios en blanco al principio y al final.
+    const espacios = fraseUsuario.trim();
+    // 2. Divida la oración en palabras.
+    const dividir = fraseUsuario.split(" ");
+    // 3. Reemplace todas las vocales 'a' por '@'. Tener en cuenta utilizar
+    // “/a/g” que indica que se debe buscar todas las apariciones del
+    // carácter 'a' en la cadena (la bandera g es para global, lo que
+    // significa que reemplazará todas las apariciones, no solo la primera).
+    const reemmplazar = fraseUsuario.replace(/a/g,"@");
+    // 4. Encuentre la posición de la primera aparición de la palabra
+    // "javascript". De no aparecer retornar -1
+    const buscar = fraseUsuario.indexOf("javascript");
+    // 5. Convierta la oración a una cadena de palabras separadas por
+    // guiones
+    const separar = dividir.join('-');
+
+    return {
+        dividida: separar,
+        posicion : buscar,
+        reemmplazar : reemmplazar,
+    }
+
+}
+
+
+
+
+let fraseProcesada = procesarFrase(fraseUsuario);
+console.log(fraseProcesada);

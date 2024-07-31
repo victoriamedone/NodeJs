@@ -1,0 +1,20 @@
+// 6) Crear una función que reciba un string y luego imprimir la
+// cantidad de vocales que se encuentran en dicha frase.
+
+const prompt = require("prompt-sync")();
+let cadena = prompt("Ingrese una frase para contar sus vocales:  ");
+let array = Array.from(cadena);
+let vocales = ['a', 'e', 'i', 'o', 'u'];
+
+
+let contarVocales=(cadena) => {
+
+    let contadorVocales = 0;
+    for(i=0; i<array ; i++){
+        if (array[i].includes(vocales)){
+            contadorVocales++;
+        }
+    }return contadorVocales;
+}
+
+console.log(contarVocales(cadena));

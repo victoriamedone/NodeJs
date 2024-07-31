@@ -1,0 +1,12 @@
+// 10) Crear una función que recibe un string en minúsculas, lo
+// convierta a mayúsculas y lo retorne.
+
+const prompt = require("prompt-sync")();
+let cadenaMin = prompt("Ingrese una cadena en minúsculas:  ");
+
+let pasarMayusculas = (cadenaMin) => {
+    cadenaMin = cadenaMin.toUpperCase();
+    console.log(cadenaMin);
+}
+
+pasarMayusculas(cadenaMin);
