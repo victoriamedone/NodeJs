@@ -1,0 +1,8 @@
+const prompt = require("prompt-sync")();
+
+const anioActual = 2024;
+let edad;
+let edadActual = (anio) => edad = anioActual - anio;
+const anio = parseInt(prompt("Ingrese su año de nacimiento: "));
+
+console.log("Usted tiene " + edadActual(anio) + " años.");

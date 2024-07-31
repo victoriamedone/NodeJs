@@ -1,0 +1,12 @@
+const prompt = require("prompt-sync")();
+
+const nombre = prompt("Ingrese el nombre de su mascota: ");
+const vacuna = prompt("Tiene las vacunas al día? si/no   ");
+
+let vacunacion = (nombre,vacuna) => {
+    vacuna === "si" ? console.log("Su mascota ya está vacunada.") : ""
+    vacuna === "no" ? console.log("Su mascota debe ser vacunada.") : ""
+
+};
+
+vacunacion(nombre,vacuna);

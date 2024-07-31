@@ -1,0 +1,15 @@
+const prompt = require("prompt-sync")();
+
+let numero = parseInt(prompt("Ingrese un numero:  "));
+
+if(numero < 10 && numero >0){
+    let faltaP2 = 10 - numero;
+    console.log("Le faltann " + faltaP2 + " cifras.");
+
+} else if(numero <100 && numero >=10){
+    let faltaP3 = 100 - numero;
+    console.log("Le faltann " + faltaP3 + " cifras.");
+
+}else(
+    console.log("ERROR!")
+)
