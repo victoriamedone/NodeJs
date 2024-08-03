@@ -1,0 +1,27 @@
+const prompt = require('prompt-sync')();
+
+let vehiculo = prompt("Ingrese el tipo de su vehiculo: ");
+let litros = parseInt(prompt("Ingrese la cantidad de litros consumidos: "));
+let aux;
+
+switch(vehiculo){
+    case "coche":
+        aux = litros * 86;
+        break;
+    case "moto":
+        aux = litros * 70;
+        break;
+    case "autobus":
+        aux = litros * 55;
+        break;
+    default:
+        console.log("Ingrese un vehículo que podamos calcular, por favor.");
+}
+
+if (litros>= 0 && litros <=25){
+    aux = aux + 50;
+} else if (litros > 25){
+    aux = aux + 25;
+}
+
+console.log("El monto a pagar es de: $" + aux + ".");
