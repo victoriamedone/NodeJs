@@ -1,0 +1,9 @@
+const prompt = require('prompt-sync')();
+
+const calcularPrecioIva = (precio, iva) => precio + (precio*iva /100);
+
+let precio = parseFloat(prompt("Ingrese el precio del prducto: "));
+let iva = parseFloat(prompt("Ingrese el porcentaje de IVA (SOLO NUMEROS): "));
+let precioFinal = calcularPrecioIva(precio,iva);
+
+console.log("El precoi final con IVA es de: $" + precioFinal + ".");

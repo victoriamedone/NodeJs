@@ -1,0 +1,20 @@
+const prompt = require('prompt-sync')();
+
+let suma = 0;
+let notas = [];
+
+for(let i=0; i<5 ; i++){
+    notas[i] = parseFloat(prompt("Ingrese la calificación: "));
+}
+
+let promedio = (notas) => {
+    for(let i = 0; i < notas.length; i++){
+        suma += notas[i];
+    }
+    return suma / notas.length;    
+}
+
+let resultado = promedio(notas);
+
+console.log("Su promedio es: " + resultado);
+

@@ -1,0 +1,11 @@
+const prompt = require('prompt-sync')();
+
+
+let precio = parseFloat(prompt("Ingrese el precio: "));
+let cant = parseFloat(prompt("Ingrese cantidad: "));
+let desc = parseFloat(prompt("Ingrese el descuento: "));
+
+let calcularTotal = (cant,precio) => (cant*precio) - desc;
+
+let precioFinal = calcularTotal(precio,cant);
+console.log("Precio final: " + precioFinal);
