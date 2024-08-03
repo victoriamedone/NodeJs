@@ -1,0 +1,41 @@
+const prompt = require('prompt-sync')();
+let dia = prompt("Por favor, ingrese un dia para saber si tienes clases: ");
+
+switch (dia) {
+    //case "lunes", "martes", "miercoles", "jueves", "viernes":
+    //  console.log("Tienes clases:).");        
+    //    break;
+
+    case "lunes":
+        console.log("Tienes clases :(.");        
+        break;
+        
+    case "martes":
+        console.log("No tienes clases :D.");  
+        break;
+        
+    case "miercoles":
+        console.log("Tienes clases :(.");  
+        break;
+        
+    case "jueves":
+        console.log("No tienes clases :D.");  
+        break;
+             
+    case "viernes":
+        console.log("Tienes clases :(.");  
+        break;
+        
+    case "domingo":
+        console.log("No tienes clases :D.");        
+        break;
+    
+
+    case "sabado":
+        console.log("No tienes clases :D.");        
+        break;
+
+    default:
+        console.log("Por favor, ingresa un día válido.")
+        break;
+}
