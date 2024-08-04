@@ -1,0 +1,96 @@
+const prompt = require('prompt-sync')();
+
+// punto 1
+let edad = 24;
+let peso = 69;
+
+//punto 2
+let nombreUsuario = prompt("Por favor, ingrese su nombre : ");
+let edadUsuario = parseInt(prompt("Por favor, ingrese su edad : "));
+let pesoUsuario = prompt("Por favor, ingrese su peso : ");
+
+console.log("Usted es " + nombreUsuario + ", tiene " + edadUsuario + " años y pesa " + pesoUsuario + " kg.");
+
+//punto 3
+
+const edadMin = 18;
+const edadMax = 99;
+
+function mayorDeEdad(edadUsuario){
+    if(edadUsuario >= edadMin && edadUsuario <= edadMax){
+        console.log("Perfecto, usted es mayor de edad.");
+    } else {
+        console.log("Disculpa, no podemos ingresar menores de edad.");
+    }
+}
+
+console.log(mayorDeEdad(edadUsuario));
+
+// punto 4
+
+let verdadero = true;
+let texto = "La vaca Lola";
+let numero = 7;
+let nada = null;
+
+let punto1 = edadUsuario - edad;
+let texto2 =  texto + " esu naloca"
+
+console.log("punto 4) 1: " + punto1);
+console.log("punto 4) 2: " + texto2);
+
+function verificarNull(nada){
+    if(nada === null){
+        console.log("La variable verificada está vacía.");
+    } else {
+        console.log("El valor de la variable no es nulo.");
+    }
+
+}
+
+console.log(verificarNull(nada));
+
+//punto5 
+
+let primerNumero = 5;
+let segundoNumero = 375;
+
+resultadoSuma = primerNumero + segundoNumero;
+resultadoResta = segundoNumero - primerNumero;
+resultadoMultiplicacion = primerNumero * segundoNumero;
+resultadoDivision = segundoNumero / primerNumero;
+
+console.log("PUNTO 5");
+console.log("suma: " + resultadoSuma);
+console.log("resta: " + resultadoResta);
+console.log("multiplicación: " + resultadoMultiplicacion);
+console.log("división: " + resultadoDivision);
+
+// punto 6
+
+function punto6(primerNumero,segundoNumero){
+    if(primerNumero<10 && segundoNumero < 10){
+        console.log("ambos numeros son menores a 10");
+    } else if (primerNumero > 10 && segundoNumero < 10){
+        console.log("Sólo " + primerNumero + " es mayor a 10.");
+    } else if (primerNumero < 10 && segundoNumero > 10){
+        console.log("Sólo el " + segundoNumero + " es mayor a 10.");
+    } else {
+        console.log("Ambos numeros son mayores a 10.");
+    }
+}
+
+console.log("PUNTO 6 : " + punto6(primerNumero,segundoNumero));
+
+
+
+
+
+
+
+
+
+
+
+
+
