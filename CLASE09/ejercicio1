@@ -1,0 +1,37 @@
+const prompt = require('prompt-sync')();
+let x = prompt("Ingrese un día de la semana: ");
+let dia = x.toLowerCase();
+
+switch (dia) {
+    case "lunes":
+        console.log("Hoy es lunes, empieza la semana con alegría.");        
+        break;
+
+    case "martes":
+        console.log("Hoy es martes, sigue adelante");        
+        break;
+
+    case "miercoles":
+        console.log("Hoy es miércoles, mitad de semana.");        
+        break;
+    
+    case "jueves":
+        console.log("Hoy es jueves, casi viernes");        
+        break;
+    
+    case "viernes":
+        console.log("Hoy es viernes, el fin de semana está cerca. ");        
+        break;
+    
+    case "sabado":
+        console.log("Hoy es sabado, disfruta tu día. ");        
+        break;
+    
+    case "domingo":
+        console.log("Hoy es domingo, dia de descanso ");        
+        break;
+    
+    default:
+        console.log("Por favor ingresa un día válido.")
+        break;
+}

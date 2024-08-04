@@ -1,0 +1,12 @@
+let RANGO_MINIMO = 46;
+let RANGO_MAXIMO = 455; 
+
+const prompt = require('prompt-sync')();
+let x = parseInt(prompt("Ingrese un numero para verificar: "));
+
+if (x > RANGO_MINIMO && x < RANGO_MAXIMO){
+    console.log("El número " + x + " se encuentra dentro del rango establecido.");
+} else {
+    console.log("El número " + x + " se encuentra fuera del rango establecido.");
+}
+

@@ -1,0 +1,14 @@
+const prompt = require('prompt-sync')();
+let x = prompt("Ingrese un número: ");
+contador = 0;
+
+function contarImpares(x){
+    for (let i = 0; i < x; i++) {
+        if(i % 2 !== 0){
+            contador++
+        }        
+    } console.log("La cantidad de números impares entre 0 y " +x+ ", es de " + contador);  
+}  
+
+
+console.log(contarImpares(x));

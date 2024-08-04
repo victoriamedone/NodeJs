@@ -1,0 +1,34 @@
+const prompt = require('prompt-sync')();
+
+const calificaciones = ["Muy buena", "Buena", "Mediocre", "Mala", "Muy mala"];
+console.log("Nuestra lista de calificaciones es:"),
+console.log(calificaciones);
+
+let calificacion = prompt("Ahora, qué te pareció la película?: ");
+let calificacionFinal = calificacion.toLowerCase();
+
+switch (calificacionFinal) {
+    case "muy buena":
+        console.log("Dijiste que la película fue " + calificacionFinal + ", nos encanta que te haya encantado!.");
+        break;
+
+     case "buena":
+        console.log("Dijiste que la película fue " + calificacionFinal + ", nos alegra que te haya gustado!.");
+        break;
+
+     case "mediocre":
+        console.log("Dijiste que la película fue " + calificacionFinal + ", nos apena que no haya estado a la altura.");
+        break;
+
+    case "mala":
+        console.log("Dijiste que la película fue " + calificacionFinal + ", nos entristece que no te haya gustado.");
+        break;
+
+    case "muy mala":
+        console.log("Dijiste que la película fue " + calificacionFinal + ", I`m vewy sowy.");
+        break;
+        
+    default:
+        console.log("Por favor ingresa una calificación válida.")
+        break;
+}

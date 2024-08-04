@@ -1,0 +1,7 @@
+const prompt = require('prompt-sync')();
+
+let condición1 = prompt("Ingresa la primera condición (true/false):") === "true";
+let condición2 = prompt("Ingresa la primera condición (true/false):") === "true";
+
+console.log("condición 1 AND condición 2: " + (condición1 && condición2));
+console.log("condición 1 OR condición 2: " + (condición1 || condición2));
